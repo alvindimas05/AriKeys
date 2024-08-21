@@ -13,10 +13,6 @@ Latest supported Minecraft version: **1.20.1**
 2. Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and put it in your mods folder.
 3. Download [AriKeys](https://github.com/ASangarin/AriKeys/releases) (Fabric) and put it in your mods folder
 
-- **Forge**
-1. Install [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/)
-2. Download [AriKeys](https://github.com/ASangarin/AriKeys/releases) (Forge) and put it in your mods folder
-
 ## Usage:
 AriKeys must be used alongside a server running the [AriKeysPlugin](https://www.spigotmc.org/resources/arikeysplugin-custom-keybinds.105968/)
 When joining such a server, it will send the configured keybinds to your client and you will be able to see and change keybindings from the game menu.
