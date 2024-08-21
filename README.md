@@ -11,7 +11,11 @@ Latest supported Minecraft version: **1.20.1**
 - **Fabric**
 1. Install [Fabric](https://fabricmc.net/use/installer/)
 2. Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and put it in your mods folder.
-3. Download [AriKeys](https://github.com/ASangarin/AriKeys/releases) (Fabric) and put it in your mods folder
+3. Download [AriKeys](https://github.com/alvindimas05/AriKeys/releases) (Fabric) and put it in your mods folder
+
+- **Fabric**
+1. Install [NeoForge](https://projects.neoforged.net/neoforged/neoforge)
+3. Download [AriKeys](https://github.com/alvindimas05/AriKeys/releases) (Fabric) and put it in your mods folder
 
 ## Usage:
 AriKeys must be used alongside a server running the [AriKeysPlugin](https://www.spigotmc.org/resources/arikeysplugin-custom-keybinds.105968/)
