@@ -51,7 +51,7 @@ jobs:
         with:
           artifacts: ./arikeys-plugin/target/*.jar,./arikeys-mod/fabric/build/libs/arikeys-mod-fabric-2.4.jar,./arikeys-mod/neoforge/build/libs/arikeys-mod-neoforge-2.4.jar
           tag: ${{ inputs.tag }}
-          name: LagAssist ${{ inputs.tag }}
+          name: AriKeys ${{ inputs.tag }}
           allowUpdates: true
           artifactErrorsFailBuild: false
           prerelease: true
