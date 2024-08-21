@@ -32,11 +32,8 @@ jobs:
       - name: Build Plugin with Maven
         working-directory: ./arikeys-plugin
         run: mvn package
-      - name: Build Fabric Mod with Gradle
-        working-directory: ./arikeys-mod/fabric
-        run: ./gradlew build
-      - name: Build NeoForge Mod with Gradle
-        working-directory: ./arikeys-mod/neoforge
+      - name: Build Mods with Gradle
+        working-directory: ./arikeys-mod
         run: ./gradlew build
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
