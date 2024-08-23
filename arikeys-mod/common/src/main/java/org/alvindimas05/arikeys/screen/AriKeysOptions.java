@@ -84,6 +84,8 @@ public class AriKeysOptions extends GameOptionsScreen {
 	}
 
 	public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+		super.render(context, mouseX, mouseY, delta);
+
 //		this.renderBackground(context, mouseX, mouseY, delta);
 		this.keyBindingListWidget.render(context, mouseX, mouseY, delta);
 		context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 8, 0xFFFFFF);
@@ -97,6 +99,5 @@ public class AriKeysOptions extends GameOptionsScreen {
 		}
 
 		this.resetButton.active = canReset;
-		super.render(context, mouseX, mouseY, delta);
 	}
 }
