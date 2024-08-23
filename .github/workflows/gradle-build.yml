@@ -42,14 +42,14 @@ jobs:
         with:
           name: artifacts-jar
           path: |
-            ./arikeys-plugin/target/arikeysplugin-2.4.jar
-            ./arikeys-mod/fabric/build/libs/arikeys-mod-fabric-2.4.jar
-            ./arikeys-mod/neoforge/build/libs/arikeys-mod-neoforge-2.4.jar
+            ./arikeys-plugin/target/*
+            ./arikeys-mod/fabric/build/libs/*
+            ./arikeys-mod/neoforge/build/libs/*
       - name: Publish release
         if: ${{ github.event_name == 'workflow_dispatch' }}
         uses: ncipollo/release-action@v1
         with:
-          artifacts: ./arikeys-plugin/target/*.jar,./arikeys-mod/fabric/build/libs/arikeys-mod-fabric-2.4.jar,./arikeys-mod/neoforge/build/libs/arikeys-mod-neoforge-2.4.jar
+          artifacts: ./arikeys-plugin/target/*.jar,./arikeys-mod/fabric/build/libs/arikeys-fabric-${{ inputs.tag }}.jar,./arikeys-mod/neoforge/build/libs/arikeys-neoforge-${{ inputs.tag }}.jar
           tag: ${{ inputs.tag }}
           name: AriKeys ${{ inputs.tag }}
           allowUpdates: true
