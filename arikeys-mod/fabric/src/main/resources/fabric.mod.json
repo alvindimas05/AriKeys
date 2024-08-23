@@ -1,38 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "arikeys-mod",
+  "id": "arikeys",
   "version": "${version}",
-  "name": "arikeys-mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "arikeys",
+  "description": "Allows the Minecraft client to send AriKey keypresses to the server.",
   "authors": [
-    "Me!"
+    "alvindimas05"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/ASangarin/AriKeys/wiki",
+    "issues": "https://github.com/alvindimas05/AriKeys/issues",
+    "sources": "https://github.com/alvindimas05/AriKeys"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/arikeys-mod/icon.png",
-  "environment": "*",
+  "license": "MIT",
+  "icon": "assets/arikeys/icon.png",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "org.alvindimas05.fabric.ExampleModFabric"
-    ],
     "client": [
-      "org.alvindimas05.fabric.client.ExampleModFabricClient"
+      "org.alvindimas05.arikeys.fabric.AriKeysFabric"
     ]
   },
   "mixins": [
-    "arikeys-mod.mixins.json"
+    "arikeys.mixins.json",
+    "arikeys-fabric.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.2",
-    "minecraft": "~1.21",
-    "java": ">=21",
-    "architectury": ">=13.0.2",
-    "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabric": "*",
+    "minecraft": ">=1.20"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "org.alvindimas05.arikeys.fabric.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "AKKeyboardFabricMixin",
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

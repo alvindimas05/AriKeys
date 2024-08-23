@@ -1,11 +1,10 @@
 {
   "required": true,
-  "package": "org.alvindimas05.mixin",
+  "package": "org.alvindimas05.arikeys.mixin",
   "compatibilityLevel": "JAVA_21",
-  "minVersion": "0.8",
   "client": [
-  ],
-  "mixins": [
+    "AKKeyboardMixin",
+    "AKOptionsScreen"
   ],
   "injectors": {
     "defaultRequire": 1
