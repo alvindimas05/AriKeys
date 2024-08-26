@@ -1,11 +1,7 @@
-[<img src="https://img.shields.io/badge/Donate-Paypal-blue">](https://www.paypal.com/donate/?hosted_button_id=XWVR2XKQ8UVLN)
----
-![AriKeys Title](https://i.imgur.com/OMtfz7Z.png)
-
 AriKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the AriKeys plugin.
 This mod must be used on a server utilizing the [AriKeysPlugin](https://www.spigotmc.org/resources/arikeysplugin-custom-keybinds.105968/) to add proper functionality.
 
-Latest supported Minecraft version: **1.20.1**
+Latest supported Minecraft version: **1.21**
 
 ## Installation:
 - **Fabric**
@@ -13,9 +9,11 @@ Latest supported Minecraft version: **1.20.1**
 2. Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and put it in your mods folder.
 3. Download [AriKeys](https://github.com/alvindimas05/AriKeys/releases) (Fabric) and put it in your mods folder
 
-- **NeoForge**
-1. Install [NeoForge](https://projects.neoforged.net/neoforged/neoforge)
-3. Download [AriKeys](https://github.com/alvindimas05/AriKeys/releases) (NeoForge) and put it in your mods folder
+[//]: # (- **NeoForge**)
+
+[//]: # (1. Install [NeoForge]&#40;https://projects.neoforged.net/neoforged/neoforge&#41;)
+
+[//]: # (3. Download [AriKeys]&#40;https://github.com/alvindimas05/AriKeys/releases&#41; &#40;NeoForge&#41; and put it in your mods folder)
 
 ## Usage:
 AriKeys must be used alongside a server running the [AriKeysPlugin](https://www.spigotmc.org/resources/arikeysplugin-custom-keybinds.105968/)

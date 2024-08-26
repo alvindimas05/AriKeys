@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'arikeys-mod'
+rootProject.name = 'arikeys'
 
 include 'common'
 include 'fabric'
