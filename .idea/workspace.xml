@@ -4,61 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838745bb-c37e-4589-a16e-a18bd8244dea" name="Changes" comment="fix workflow">
+    <list default="true" id="838745bb-c37e-4589-a16e-a18bd8244dea" name="Changes" comment="seperate the api plugin and mod">
       <change beforePath="$PROJECT_DIR$/.github/workflows/gradle-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradle-build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/AriKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/AriKeys.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/AriKeysPlatform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/mixin/AKKeyboardMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/mixin/AKOptionsScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/screen/AriKeyControlsListWidget.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/screen/AriKeysButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/screen/AriKeysOptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/AriKeysIO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/AriKeysPayload.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/KeyCategoryComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/KeyModifierComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/ModifierKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/network/KeyAddData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/java/org/alvindimas05/arikeys/util/network/KeyPressData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/resources/arikeys.mixins.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/resources/assets/arikeys/lang/en_us.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/common/src/main/resources/assets/arikeys/textures/gui/arikeys_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/src/main/java/org/alvindimas05/arikeys/fabric/AriKeysFabric.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/src/main/java/org/alvindimas05/arikeys/fabric/AriKeysPlatformImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/src/main/java/org/alvindimas05/arikeys/fabric/AriKeysReceiveMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/src/main/java/org/alvindimas05/arikeys/fabric/mixin/AKKeyboardFabricMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/src/main/resources/arikeys-fabric.mixins.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/fabric/src/main/resources/fabric.mod.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-mod/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/AriKeysChannels.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/AriKeysListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/AriKeysNetwork.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/AriKeysPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/ModifierKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/api/AriKeyEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/api/AriKeyPressEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/api/AriKeyReleaseEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/cmd/AriKeysCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/compat/MythicMobsCompat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/config/AriKeyInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/java/org/alvindimas05/arikeys/config/AriKeysConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/resources/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arikeys-plugin/src/main/resources/plugin.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +285,7 @@
       <workItem from="1724714652680" duration="122000" />
       <workItem from="1724715105246" duration="101000" />
       <workItem from="1724715216007" duration="145000" />
-      <workItem from="1724715369855" duration="28000" />
+      <workItem from="1724715369855" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="update 1.21">
       <option name="closed" value="true" />
@@ -452,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724413566952</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="seperate the api plugin and mod">
+      <option name="closed" value="true" />
+      <created>1724715647668</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724715647668</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +426,8 @@
     <MESSAGE value="fix client options blur" />
     <MESSAGE value="fix controls height" />
     <MESSAGE value="fix workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix workflow" />
+    <MESSAGE value="seperate the api plugin and mod" />
+    <option name="LAST_COMMIT_MESSAGE" value="seperate the api plugin and mod" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
