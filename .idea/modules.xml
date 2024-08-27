@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/arikeys.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/arikeys.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/arikeys.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/mythickeys.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/mythickeys.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/mythickeys.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/mythickeys.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/mythickeys.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/mythickeys.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/mythickeys.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/mythickeys.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/mythickeys.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/mythickeys.fabric.test.iml" />
     </modules>
   </component>
 </project>

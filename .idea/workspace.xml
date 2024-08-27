@@ -4,40 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838745bb-c37e-4589-a16e-a18bd8244dea" name="Changes" comment="gradle things">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gradle-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradle-build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/common/arikeys.common.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fabric/arikeys.fabric.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server___fabric__fabric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server___fabric__fabric.xml" afterDir="false" />
+    <list default="true" id="838745bb-c37e-4589-a16e-a18bd8244dea" name="Changes" comment="readme title">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/AriKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/AriKeys.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/AriKeysPlatform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/mixin/AKKeyboardMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/mixin/AKOptionsScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/screen/AriKeyControlsListWidget.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/screen/AriKeysButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/screen/AriKeysOptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/AriKeysIO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/AriKeysPayload.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/KeyCategoryComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/KeyModifierComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/ModifierKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/network/KeyAddData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/alvindimas05/arikeys/util/network/KeyPressData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/arikeys.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/arikeys.mixins.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/assets/arikeys/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/assets/arikeys/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/org/alvindimas05/arikeys/fabric/AriKeysFabric.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/org/alvindimas05/arikeys/fabric/AriKeysPlatformImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/org/alvindimas05/arikeys/fabric/AriKeysReceiveMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/org/alvindimas05/arikeys/fabric/mixin/AKKeyboardFabricMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/arikeys-fabric.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/resources/arikeys-fabric.mixins.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/resources/fabric.mod.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +325,7 @@
       <workItem from="1724715105246" duration="101000" />
       <workItem from="1724715216007" duration="145000" />
       <workItem from="1724715369855" duration="1088000" />
-      <workItem from="1724716475056" duration="1220000" />
+      <workItem from="1724716475056" duration="1474000" />
     </task>
     <task id="LOCAL-00001" summary="update 1.21">
       <option name="closed" value="true" />
@@ -495,7 +463,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724716773666</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="goodbye arikeys, welcome mythickeys">
+      <option name="closed" value="true" />
+      <created>1724719119966</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724719119967</updated>
+    </task>
+    <task id="LOCAL-00019" summary="goodbye arikeys, welcome mythickeys">
+      <option name="closed" value="true" />
+      <created>1724719140728</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724719140728</updated>
+    </task>
+    <task id="LOCAL-00020" summary="readme title">
+      <option name="closed" value="true" />
+      <created>1724719167074</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724719167074</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +509,9 @@
     <MESSAGE value="seperate the api plugin and mod" />
     <MESSAGE value="update workflow" />
     <MESSAGE value="gradle things" />
-    <option name="LAST_COMMIT_MESSAGE" value="gradle things" />
+    <MESSAGE value="goodbye arikeys, welcome mythickeys" />
+    <MESSAGE value="readme title" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme title" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

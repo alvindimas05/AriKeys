@@ -1,14 +1,12 @@
 # MythicKeys
 
 MythicKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the MythicKeys plugin.
-This mod must be used on a server utilizing the [MythicKeysPlugin](https://www.spigotmc.org/resources/mythickeysplugin-custom-keybinds.105968/) to add proper functionality.
-
-Latest supported Minecraft version: **1.21**
+This mod must be used on a server utilizing the [MythicSkillAPI](https://github.com/alvindimas05/MythicSkillAPI) to add proper functionality.
 
 ## Installation:
-- **Fabric**
+### **Fabric**
 1. Install [Fabric](https://fabricmc.net/use/installer/)
-2. Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and put it in your mods folder.
+2. Download [Fabric API](https://modrinth.com/mod/fabric-api) and put it in your mods folder.
 3. Download [MythicKeys](https://github.com/alvindimas05/MythicKeys/releases) (Fabric) and put it in your mods folder
 
 [//]: # (- **NeoForge**)
@@ -18,7 +16,7 @@ Latest supported Minecraft version: **1.21**
 [//]: # (3. Download [MythicKeys]&#40;https://github.com/alvindimas05/MythicKeys/releases&#41; &#40;NeoForge&#41; and put it in your mods folder)
 
 ## Usage:
-MythicKeys must be used alongside a server running the [MythicSkillAPI](https://www.spigotmc.org/resources/mythickeysplugin-custom-keybinds.105968/)
+MythicKeys must be used alongside a server running the [MythicSkillAPI](https://github.com/alvindimas05/MythicSkillAPI)
 When joining such a server, it will send the configured keybinds to your client and you will be able to see and change keybindings from the game menu.
 
 ![MythicKeys Button](https://i.imgur.com/LAFh91m.png)
