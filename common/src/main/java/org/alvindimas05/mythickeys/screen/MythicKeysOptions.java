@@ -91,8 +91,8 @@ public class MythicKeysOptions extends GameOptionsScreen {
 		context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 8, 0xFFFFFF);
 		boolean canReset = false;
 
-		for (MythicKey ariKey : MythicKeys.getKeybinds()) {
-			if (ariKey.hasChanged()) {
+		for (MythicKey mythicKey : MythicKeys.getKeybinds()) {
+			if (mythicKey.hasChanged()) {
 				canReset = true;
 				break;
 			}

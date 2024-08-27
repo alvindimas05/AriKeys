@@ -3,7 +3,7 @@
   "id": "mythickeys",
   "version": "${version}",
   "name": "mythickeys",
-  "description": "Allows the Minecraft client to send AriKey keypresses to the server.",
+  "description": "Allows the Minecraft client to send MythicKey keypresses to the server.",
   "authors": [
     "alvindimas05"
   ],

@@ -3,8 +3,8 @@
   "package": "org.alvindimas05.mythickeys.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "AKKeyboardMixin",
-    "AKOptionsScreen"
+    "MKKeyboardMixin",
+    "MKOptionsScreen"
   ],
   "injectors": {
     "defaultRequire": 1

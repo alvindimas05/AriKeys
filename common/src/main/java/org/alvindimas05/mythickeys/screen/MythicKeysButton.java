@@ -19,7 +19,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class MythicKeysButton implements Drawable, Element, Selectable {
 	public static final Identifier WIDGETS_TEXTURE = Identifier.of("mythickeys", "textures/gui/mythickeys_button.png");
-	private final Text message = Text.translatable("mythickeys.aributton");
+	private final Text message = Text.translatable("mythickeys.mythicbutton");
 	public int x;
 	public int y;
 	protected boolean hovered;

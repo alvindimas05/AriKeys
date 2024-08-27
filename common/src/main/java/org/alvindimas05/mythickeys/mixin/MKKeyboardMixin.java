@@ -33,8 +33,8 @@ public class MKKeyboardMixin {
 			if (MythicKeys.getVanillaKeys().contains(id)) mythickeys$registerPress(id, key, pressed);
 		}
 
-		for (MythicKey ariKey : MythicKeys.getModifierSortedKeybinds())
-			if (key.equals(ariKey.getBoundKeyCode()) && ariKey.testModifiers()) mythickeys$registerPress(ariKey.getId(), key, pressed);
+		for (MythicKey mythicKey : MythicKeys.getModifierSortedKeybinds())
+			if (key.equals(mythicKey.getBoundKeyCode()) && mythicKey.testModifiers()) mythickeys$registerPress(mythicKey.getId(), key, pressed);
 	}
 
 	@Unique

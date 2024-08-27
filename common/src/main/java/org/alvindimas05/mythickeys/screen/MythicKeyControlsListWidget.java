@@ -33,20 +33,20 @@ public class MythicKeyControlsListWidget extends ElementListWidget<MythicKeyCont
 		this.parent = parent;
 		String category = null;
 
-		for (MythicKey ariKey : MythicKeys.getCategorySortedKeybinds()) {
-			String keyCat = ariKey.getCategory();
+		for (MythicKey mythicKey : MythicKeys.getCategorySortedKeybinds()) {
+			String keyCat = mythicKey.getCategory();
 			if (!keyCat.equals(category)) {
 				category = keyCat;
 				this.addEntry(new CategoryEntry(Text.literal(keyCat)));
 			}
 
-			Text text = Text.literal(ariKey.getName());
+			Text text = Text.literal(mythicKey.getName());
 			int i = client.textRenderer.getWidth(text);
 			if (i > this.maxKeyNameLength) {
 				this.maxKeyNameLength = i;
 			}
 
-			this.addEntry(new KeyBindingEntry(ariKey, text));
+			this.addEntry(new KeyBindingEntry(mythicKey, text));
 		}
 
 	}
@@ -93,60 +93,60 @@ public class MythicKeyControlsListWidget extends ElementListWidget<MythicKeyCont
 	}
 
 	public class KeyBindingEntry extends Entry {
-		private final MythicKey ariKey;
+		private final MythicKey mythicKey;
 		private final Text bindingName;
 		private final ButtonWidget editButton;
 		private final ButtonWidget resetButton;
 
-		KeyBindingEntry(MythicKey ariKey, Text bindingName) {
-			this.ariKey = ariKey;
+		KeyBindingEntry(MythicKey mythicKey, Text bindingName) {
+			this.mythicKey = mythicKey;
 			this.bindingName = bindingName;
 
-			this.editButton = ButtonWidget.builder(bindingName, (button) -> MythicKeyControlsListWidget.this.parent.focusedMKey = ariKey)
+			this.editButton = ButtonWidget.builder(bindingName, (button) -> MythicKeyControlsListWidget.this.parent.focusedMKey = mythicKey)
 					.dimensions(0, 0, 135, 20).narrationSupplier(
-							supplier -> ariKey.isUnbound() ? Text.translatable("narrator.controls.unbound", bindingName) : Text.translatable(
+							supplier -> mythicKey.isUnbound() ? Text.translatable("narrator.controls.unbound", bindingName) : Text.translatable(
 									"narrator.controls.bound", bindingName, supplier.get())).build();
 
 			this.resetButton = ButtonWidget.builder(Text.translatable("controls.reset"), (button) -> {
-				ariKey.setBoundKey(ariKey.getKeyCode(), false);
-				ariKey.resetBoundModifiers();
+				mythicKey.setBoundKey(mythicKey.getKeyCode(), false);
+				mythicKey.resetBoundModifiers();
 				MythicKeysIO.save();
 				KeyBinding.updateKeysByCode();
 			}).dimensions(0, 0, 50, 20).narrationSupplier(supplier -> Text.translatable("narrator.controls.reset", bindingName)).build();
 		}
 
 		public void render(DrawContext context, int index, int y, int x, int entryWidth, int entryHeight, int mouseX, int mouseY, boolean hovered, float tickDelta) {
-			boolean bl = parent.focusedMKey == this.ariKey;
+			boolean bl = parent.focusedMKey == this.mythicKey;
 			int width = x + 20 - maxKeyNameLength;
 			int height = y + entryHeight / 2;
 			context.drawText(client.textRenderer, this.bindingName, width, height - 9 / 2, 16777215, false);
 
 			this.resetButton.setX(x + 210);
 			this.resetButton.setY(y);
-			this.resetButton.active = this.ariKey.hasChanged();
+			this.resetButton.active = this.mythicKey.hasChanged();
 			this.resetButton.render(context, mouseX, mouseY, tickDelta);
 			this.editButton.setX(x + 65);
 			this.editButton.setY(y);
 			MutableText editMessage = Text.empty();
-			for (ModifierKey modifier : this.ariKey.getBoundModifiers()) {
+			for (ModifierKey modifier : this.mythicKey.getBoundModifiers()) {
 				editMessage.append(Text.translatable(modifier.getTranslationKey()));
 				editMessage.append(Text.literal(" + "));
 			}
-			editMessage.append(this.ariKey.getBoundKeyCode().getLocalizedText().copyContentOnly());
+			editMessage.append(this.mythicKey.getBoundKeyCode().getLocalizedText().copyContentOnly());
 			editMessage = editMessage.copy();
 			boolean bl2 = false;
-			if (!this.ariKey.isUnbound()) {
+			if (!this.mythicKey.isUnbound()) {
 				final List<KeyBinding> bindings = new ArrayList<>(List.of(client.options.allKeys));
 				for (KeyBinding keyBinding : bindings) {
-					if (keyBinding.getBoundKeyTranslationKey().equals(ariKey.getBoundKeyCode().getTranslationKey()) && ariKey.getBoundModifiers()
+					if (keyBinding.getBoundKeyTranslationKey().equals(mythicKey.getBoundKeyCode().getTranslationKey()) && mythicKey.getBoundModifiers()
 							.size() == 0) {
 						bl2 = true;
 						break;
 					}
 				}
 				for (MythicKey key : MythicKeys.getKeybinds()) {
-					if (!key.equals(ariKey) && key.getBoundKeyCode().equals(ariKey.getBoundKeyCode())) {
-						if (key.testModifiers(ariKey.getBoundModifiers())) {
+					if (!key.equals(mythicKey) && key.getBoundKeyCode().equals(mythicKey.getBoundKeyCode())) {
+						if (key.testModifiers(mythicKey.getBoundModifiers())) {
 							bl2 = true;
 							break;
 						}

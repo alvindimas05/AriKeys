@@ -57,22 +57,22 @@ public class MythicKeysIO {
 			}
 			bufferedReader.close();
 
-			for (MythicKey ariKey : MythicKeys.getKeybinds()) {
-				String key = "arikey_" + ariKey.getId().toString().replace(":", "+");
+			for (MythicKey mythicKey : MythicKeys.getKeybinds()) {
+				String key = "mythickey_" + mythicKey.getId().toString().replace(":", "+");
 
-				String defKey = ariKey.getBoundKeyCode().getTranslationKey();
+				String defKey = mythicKey.getBoundKeyCode().getTranslationKey();
 				String keybind = MoreObjects.firstNonNull(nbtCompound.contains(key) ? nbtCompound.getString(key) : null, defKey);
 
-				Set<ModifierKey> modifiers = new HashSet<>(ariKey.getModifiers());
+				Set<ModifierKey> modifiers = new HashSet<>(mythicKey.getModifiers());
 				for (ModifierKey modifier : ModifierKey.ALL) {
 					String modKey = key + "_" + modifier.getId();
 					if (nbtCompound.contains(modKey)) modifiers.add(modifier);
 					else modifiers.remove(modifier);
 				}
 
-				if (!defKey.equals(keybind) || !modifiers.containsAll(ariKey.getModifiers())) {
-					ariKey.setBoundKey(InputUtil.fromTranslationKey(keybind), false);
-					ariKey.setBoundModifiers(modifiers);
+				if (!defKey.equals(keybind) || !modifiers.containsAll(mythicKey.getModifiers())) {
+					mythicKey.setBoundKey(InputUtil.fromTranslationKey(keybind), false);
+					mythicKey.setBoundModifiers(modifiers);
 				}
 			}
 
@@ -87,13 +87,13 @@ public class MythicKeysIO {
 			final PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(KEYBIND_FILE), StandardCharsets.UTF_8));
 
 			try {
-				for (MythicKey ariKey : MythicKeys.getKeybinds()) {
-					printWriter.print("arikey_" + ariKey.getId().toString().replace(":", "+"));
+				for (MythicKey mythicKey : MythicKeys.getKeybinds()) {
+					printWriter.print("mythickey_" + mythicKey.getId().toString().replace(":", "+"));
 					printWriter.print(':');
-					printWriter.println(ariKey.getBoundKeyCode().getTranslationKey());
+					printWriter.println(mythicKey.getBoundKeyCode().getTranslationKey());
 
-					for (ModifierKey modifier : ariKey.getBoundModifiers()) {
-						printWriter.print("arikey_" + ariKey.getId().toString().replace(":", "+") + "_" + modifier.getId());
+					for (ModifierKey modifier : mythicKey.getBoundModifiers()) {
+						printWriter.print("mythickey_" + mythicKey.getId().toString().replace(":", "+") + "_" + modifier.getId());
 						printWriter.print(':');
 						printWriter.println("true");
 					}
