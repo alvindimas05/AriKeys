@@ -1,3 +1,5 @@
+# MythicKeys
+
 MythicKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the MythicKeys plugin.
 This mod must be used on a server utilizing the [MythicKeysPlugin](https://www.spigotmc.org/resources/mythickeysplugin-custom-keybinds.105968/) to add proper functionality.
 
