@@ -1,7 +1,7 @@
 # MythicKeys
 
 MythicKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the MythicKeys plugin.
-This mod must be used on a server utilizing the [MythicSkillAPI](https://github.com/alvindimas05/MythicSkillAPI) to add proper functionality.
+This mod must be used on a server utilizing the [MythicControlAPI](https://github.com/alvindimas05/MythicControlAPI) to add proper functionality.
 
 ## Installation:
 ### **Fabric**
@@ -16,7 +16,7 @@ This mod must be used on a server utilizing the [MythicSkillAPI](https://github.
 [//]: # (3. Download [MythicKeys]&#40;https://github.com/alvindimas05/MythicKeys/releases&#41; &#40;NeoForge&#41; and put it in your mods folder)
 
 ## Usage:
-MythicKeys must be used alongside a server running the [MythicSkillAPI](https://github.com/alvindimas05/MythicSkillAPI)
+MythicKeys must be used alongside a server running the [MythicControlAPI](https://github.com/alvindimas05/MythicControlAPI)
 When joining such a server, it will send the configured keybinds to your client and you will be able to see and change keybindings from the game menu.
 
 ![MythicKeys Button](https://i.imgur.com/LAFh91m.png)

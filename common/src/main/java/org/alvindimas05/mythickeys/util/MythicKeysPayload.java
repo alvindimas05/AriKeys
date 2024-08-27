@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 
 public interface MythicKeysPayload {
 	record Handshake(String value) implements CustomPayload {
-		public static final Id<Handshake> ID = new Id<>(Identifier.of("mythickeys:greeting"));
+		public static final Id<Handshake> ID = new Id<>(Identifier.of("mythiccontrol:greeting"));
 		public static final PacketCodec<RegistryByteBuf, Handshake> CODEC = PacketCodecs.STRING
 				.xmap(Handshake::new, Handshake::value).cast();
 
@@ -19,7 +19,7 @@ public interface MythicKeysPayload {
 		}
 	}
 	record AddKey(String value) implements CustomPayload {
-		public static final Id<AddKey> ID = new Id<>(Identifier.of("mythickeys:addkey"));
+		public static final Id<AddKey> ID = new Id<>(Identifier.of("mythiccontrol:addkey"));
 		public static final PacketCodec<RegistryByteBuf, AddKey> CODEC = PacketCodecs.STRING
 				.xmap(AddKey::new, AddKey::value).cast();
 
@@ -29,7 +29,7 @@ public interface MythicKeysPayload {
 		}
 	}
 	record Load(byte[] value) implements CustomPayload {
-		public static final Id<Load> ID = new Id<>(Identifier.of("mythickeys:load"));
+		public static final Id<Load> ID = new Id<>(Identifier.of("mythiccontrol:load"));
 		public static final PacketCodec<RegistryByteBuf, Load> CODEC = PacketCodecs.BYTE_ARRAY
 				.xmap(Load::new, Load::value).cast();
 
@@ -39,7 +39,7 @@ public interface MythicKeysPayload {
 		}
 	}
 	record Key(String value) implements CustomPayload {
-		public static final Id<Key> ID = new Id<>(Identifier.of("mythickeys:keybind"));
+		public static final Id<Key> ID = new Id<>(Identifier.of("mythiccontrol:keybind"));
 		public static final PacketCodec<RegistryByteBuf, Key> CODEC = PacketCodecs.STRING
 				.xmap(Key::new, Key::value).cast();
 
