@@ -1,5 +1,5 @@
-AriKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the AriKeys plugin.
-This mod must be used on a server utilizing the [AriKeysPlugin](https://www.spigotmc.org/resources/arikeysplugin-custom-keybinds.105968/) to add proper functionality.
+MythicKeys is a client-side mod for Minecraft, which allows your client to receive and send keypresses between servers using the MythicKeys plugin.
+This mod must be used on a server utilizing the [MythicKeysPlugin](https://www.spigotmc.org/resources/mythickeysplugin-custom-keybinds.105968/) to add proper functionality.
 
 Latest supported Minecraft version: **1.21**
 
@@ -7,19 +7,19 @@ Latest supported Minecraft version: **1.21**
 - **Fabric**
 1. Install [Fabric](https://fabricmc.net/use/installer/)
 2. Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) and put it in your mods folder.
-3. Download [AriKeys](https://github.com/alvindimas05/AriKeys/releases) (Fabric) and put it in your mods folder
+3. Download [MythicKeys](https://github.com/alvindimas05/MythicKeys/releases) (Fabric) and put it in your mods folder
 
 [//]: # (- **NeoForge**)
 
 [//]: # (1. Install [NeoForge]&#40;https://projects.neoforged.net/neoforged/neoforge&#41;)
 
-[//]: # (3. Download [AriKeys]&#40;https://github.com/alvindimas05/AriKeys/releases&#41; &#40;NeoForge&#41; and put it in your mods folder)
+[//]: # (3. Download [MythicKeys]&#40;https://github.com/alvindimas05/MythicKeys/releases&#41; &#40;NeoForge&#41; and put it in your mods folder)
 
 ## Usage:
-AriKeys must be used alongside a server running the [AriKeysPlugin](https://www.spigotmc.org/resources/arikeysplugin-custom-keybinds.105968/)
+MythicKeys must be used alongside a server running the [MythicSkillAPI](https://www.spigotmc.org/resources/mythickeysplugin-custom-keybinds.105968/)
 When joining such a server, it will send the configured keybinds to your client and you will be able to see and change keybindings from the game menu.
 
-![AriKeys Button](https://i.imgur.com/LAFh91m.png)
+![MythicKeys Button](https://i.imgur.com/LAFh91m.png)
 
 (Please note that the button only appears on compatible servers)
 

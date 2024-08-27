@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "arikeys",
+  "id": "mythickeys",
   "version": "${version}",
-  "name": "arikeys",
+  "name": "mythickeys",
   "description": "Allows the Minecraft client to send AriKey keypresses to the server.",
   "authors": [
     "alvindimas05"
   ],
   "contact": {
-    "homepage": "https://github.com/ASangarin/AriKeys/wiki",
-    "issues": "https://github.com/alvindimas05/AriKeys/issues",
-    "sources": "https://github.com/alvindimas05/AriKeys"
+    "homepage": "https://github.com/ASangarin/MythicKeys/wiki",
+    "issues": "https://github.com/alvindimas05/MythicKeys/issues",
+    "sources": "https://github.com/alvindimas05/MythicKeys"
   },
   "license": "MIT",
-  "icon": "assets/arikeys/icon.png",
+  "icon": "assets/mythickeys/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "org.alvindimas05.arikeys.fabric.AriKeysFabric"
+      "org.alvindimas05.mythickeys.fabric.MythicKeysFabric"
     ]
   },
   "mixins": [
-    "arikeys.mixins.json",
-    "arikeys-fabric.mixins.json"
+    "mythickeys.mixins.json",
+    "mythickeys-fabric.mixins.json"
   ],
   "depends": {
     "fabric": "*",

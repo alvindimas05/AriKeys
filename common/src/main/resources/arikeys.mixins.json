@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "org.alvindimas05.arikeys.mixin",
+  "package": "org.alvindimas05.mythickeys.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
     "AKKeyboardMixin",

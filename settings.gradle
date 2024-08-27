@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'arikeys'
+rootProject.name = 'mythickeys'
 
 include 'common'
 include 'fabric'
