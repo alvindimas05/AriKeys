@@ -72,7 +72,7 @@ public class MythicKeyControlsListWidget extends ElementListWidget<MythicKeyCont
 			assert client.currentScreen != null;
 			int width = (client.currentScreen.width / 2 - this.textWidth / 2);
 			int height = y + entryHeight;
-			context.drawText(client.textRenderer, this.text, width, height - 9 - 1, 16777215, false);
+			context.drawText(client.textRenderer, this.text, width, height - 20, 16777215, false);
 		}
 
 		public List<? extends Element> children() {
