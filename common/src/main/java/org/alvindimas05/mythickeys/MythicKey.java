@@ -6,29 +6,39 @@ import lombok.Getter;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 public class MythicKey {
+	private final Identifier type;
 	private final Identifier id;
 	private final String name, category;
+	@Nullable
 	private final InputUtil.Key keyCode;
+	@Nullable
 	private InputUtil.Key boundKeyCode;
+	private final String voice;
 	private final Set<ModifierKey> modifiers;
 	private Set<ModifierKey> boundModifiers;
 
 	public MythicKey(KeyAddData data) {
-		this(data.getId(), data.getName(), data.getCategory(), InputUtil.Type.KEYSYM.createFromCode(data.getDefKey()), data.getModifiers());
+		this(data.getType(), data.getId(), data.getName(), data.getCategory(),
+				data.getDefKey() != null ? InputUtil.Type.KEYSYM.createFromCode(data.getDefKey()) : null,
+				data.getVoice(), data.getModifiers());
 	}
 
-	public MythicKey(Identifier id, String name, String category, InputUtil.Key keyCode, int[] modifiers) {
+	public MythicKey(Identifier type, Identifier id, String name, String category,
+					 @Nullable InputUtil.Key keyCode, String voice, int[] modifiers) {
+		this.type = type;
 		this.id = id;
 		this.name = name;
 		this.category = category;
 		this.keyCode = keyCode;
 		this.boundKeyCode = keyCode;
+		this.voice = voice;
 		this.modifiers = ModifierKey.getFromArray(modifiers);
 		this.boundModifiers = new HashSet<>(this.modifiers);
 	}
@@ -52,11 +62,11 @@ public class MythicKey {
 	}
 
 	public boolean hasChanged() {
-		return !keyCode.equals(boundKeyCode) || !testModifiers(this.modifiers);
+		return keyCode != null && (!keyCode.equals(boundKeyCode) || !testModifiers(this.modifiers));
 	}
 
 	public boolean isUnbound() {
-		return boundKeyCode.equals(InputUtil.UNKNOWN_KEY);
+		return boundKeyCode != null && boundKeyCode.equals(InputUtil.UNKNOWN_KEY);
 	}
 
 	public boolean testModifiers() {

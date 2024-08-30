@@ -17,8 +17,8 @@ public class MythicKeysFabric implements ClientModInitializer {
         ClientPlayConnectionEvents.DISCONNECT.register(((handler, client) -> MythicKeys.handleDisconnect()));
         ClientPlayConnectionEvents.JOIN.register((handler, sender, server) -> MythicKeys.handleConnect());
 
-        MythicKeys.LOGGER.info("MythicKeys initialized.");
-
         MythicKeysReceiveMessage.init();
+
+        MythicKeys.LOGGER.info("MythicKeys initialized.");
     }
 }

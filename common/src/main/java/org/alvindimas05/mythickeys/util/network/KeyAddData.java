@@ -6,12 +6,17 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
 
 @Getter
 @RequiredArgsConstructor
 public class KeyAddData {
+	private final Identifier type;
 	private final Identifier id;
 	private final String name, category;
-	private final int defKey;
+	@Nullable
+	private final Integer defKey;
+	@Nullable
+	private final String voice;
 	private final int[] modifiers;
 }

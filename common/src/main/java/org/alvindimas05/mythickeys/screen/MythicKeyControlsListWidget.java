@@ -21,6 +21,7 @@ import net.minecraft.util.Formatting;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 
 public class MythicKeyControlsListWidget extends ElementListWidget<MythicKeyControlsListWidget.Entry> {
@@ -121,44 +122,54 @@ public class MythicKeyControlsListWidget extends ElementListWidget<MythicKeyCont
 			int height = y + entryHeight / 2;
 			context.drawText(client.textRenderer, this.bindingName, width, height - 9 / 2, 16777215, false);
 
-			this.resetButton.setX(x + 210);
-			this.resetButton.setY(y);
-			this.resetButton.active = this.mythicKey.hasChanged();
-			this.resetButton.render(context, mouseX, mouseY, tickDelta);
 			this.editButton.setX(x + 65);
 			this.editButton.setY(y);
 			MutableText editMessage = Text.empty();
-			for (ModifierKey modifier : this.mythicKey.getBoundModifiers()) {
-				editMessage.append(Text.translatable(modifier.getTranslationKey()));
-				editMessage.append(Text.literal(" + "));
-			}
-			editMessage.append(this.mythicKey.getBoundKeyCode().getLocalizedText().copyContentOnly());
-			editMessage = editMessage.copy();
-			boolean bl2 = false;
-			if (!this.mythicKey.isUnbound()) {
-				final List<KeyBinding> bindings = new ArrayList<>(List.of(client.options.allKeys));
-				for (KeyBinding keyBinding : bindings) {
-					if (keyBinding.getBoundKeyTranslationKey().equals(mythicKey.getBoundKeyCode().getTranslationKey()) && mythicKey.getBoundModifiers()
-							.size() == 0) {
-						bl2 = true;
-						break;
-					}
+
+			if(Objects.equals(this.mythicKey.getType().getPath(), "key")) {
+				this.resetButton.setX(x + 210);
+				this.resetButton.setY(y);
+				this.resetButton.active = this.mythicKey.hasChanged();
+				this.resetButton.render(context, mouseX, mouseY, tickDelta);
+
+				for (ModifierKey modifier : this.mythicKey.getBoundModifiers()) {
+					editMessage.append(Text.translatable(modifier.getTranslationKey()));
+					editMessage.append(Text.literal(" + "));
 				}
-				for (MythicKey key : MythicKeys.getKeybinds()) {
-					if (!key.equals(mythicKey) && key.getBoundKeyCode().equals(mythicKey.getBoundKeyCode())) {
-						if (key.testModifiers(mythicKey.getBoundModifiers())) {
+				editMessage.append(this.mythicKey.getBoundKeyCode().getLocalizedText().copyContentOnly());
+				editMessage = editMessage.copy();
+
+				boolean bl2 = false;
+				if (!this.mythicKey.isUnbound()) {
+					final List<KeyBinding> bindings = new ArrayList<>(List.of(client.options.allKeys));
+					for (KeyBinding keyBinding : bindings) {
+						if (keyBinding.getBoundKeyTranslationKey().equals(mythicKey.getBoundKeyCode().getTranslationKey()) && mythicKey.getBoundModifiers()
+								.size() == 0) {
 							bl2 = true;
 							break;
 						}
 					}
+					for (MythicKey key : MythicKeys.getKeybinds()) {
+						if(Objects.equals(key.getType().getPath(), "voice")) continue;
+						if (!key.equals(mythicKey) && key.getBoundKeyCode().equals(mythicKey.getBoundKeyCode())) {
+							if (key.testModifiers(mythicKey.getBoundModifiers())) {
+								bl2 = true;
+								break;
+							}
+						}
+					}
 				}
-			}
 
-			if (bl) {
-				this.editButton.setMessage((Text.literal("> ")).append(editMessage.formatted(Formatting.YELLOW)).append(" <").formatted(Formatting.YELLOW));
-			} else if (bl2) {
-				this.editButton.setMessage(editMessage.formatted(Formatting.RED));
-			} else this.editButton.setMessage(editMessage);
+				if (bl) {
+					this.editButton.setMessage((Text.literal("> ")).append(editMessage.formatted(Formatting.YELLOW)).append(" <").formatted(Formatting.YELLOW));
+				} else if (bl2) {
+					this.editButton.setMessage(editMessage.formatted(Formatting.RED));
+				} else this.editButton.setMessage(editMessage);
+			} else {
+				editMessage = Text.literal(this.mythicKey.getVoice());
+				this.editButton.setMessage(editMessage);
+				this.editButton.active = false;
+			}
 
 			this.editButton.render(context, mouseX, mouseY, tickDelta);
 		}

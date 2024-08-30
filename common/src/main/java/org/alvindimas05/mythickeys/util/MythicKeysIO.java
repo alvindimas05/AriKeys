@@ -21,6 +21,7 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.Set;
 
 /* Minecrafts way of storing keybinds. Not the cleanest, but it works. */
@@ -58,9 +59,12 @@ public class MythicKeysIO {
 			bufferedReader.close();
 
 			for (MythicKey mythicKey : MythicKeys.getKeybinds()) {
+				if(Objects.equals(mythicKey.getType().getPath(), "voice")) continue;
+
 				String key = "mythickey_" + mythicKey.getId().toString().replace(":", "+");
 
-				String defKey = mythicKey.getBoundKeyCode().getTranslationKey();
+                assert mythicKey.getBoundKeyCode() != null;
+                String defKey = mythicKey.getBoundKeyCode().getTranslationKey();
 				String keybind = MoreObjects.firstNonNull(nbtCompound.contains(key) ? nbtCompound.getString(key) : null, defKey);
 
 				Set<ModifierKey> modifiers = new HashSet<>(mythicKey.getModifiers());

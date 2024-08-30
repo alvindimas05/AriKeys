@@ -8,6 +8,7 @@ import org.alvindimas05.mythickeys.util.MythicKeysPayload;
 import org.alvindimas05.mythickeys.util.network.KeyAddData;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 public class MythicKeysReceiveMessage {
@@ -17,15 +18,28 @@ public class MythicKeysReceiveMessage {
                 !message.getString().startsWith(MythicKeysPayload.Load.ID.id().toString())
             ) return true;
 
+            MythicKeys.LOGGER.info(message.getString());
+
+            // 0 = channel name (ex. mythiccontrol:addkey)
+            // 1 = type name (ex. type:key or type:voice)
+            // 2 = control id (ex. mythiccontrol:examplekey)
+            // 3 = control name (ex. Example Key)
+            // 4 = category name (ex. Example Category)
+            // 5 = key code (nullable if type:voice) (ex. 74 means J key)
+            // 6 = voice word (nullable if type:key) (ex. "example")
+            // 7 = key modifiers (ex. left alt or left shift in key code)
+
             try {
                 String[] messages = message.getString().split("\\|");
                 if(messages[0].equals(MythicKeysPayload.AddKey.ID.id().toString())) {
                     MythicKeys.add(new KeyAddData(
                             Identifier.of(messages[1]),
-                            messages[2],
+                            Identifier.of(messages[2]),
                             messages[3],
-                            Integer.parseInt(messages[4]),
-                            messages.length > 5 ? Stream.of(messages[5].split(","))
+                            messages[4],
+                            !Objects.equals(messages[5], "null") ? Integer.parseInt(messages[5]) : null,
+                            !Objects.equals(messages[6], "null") ? messages[6] : null,
+                            messages.length > 7 ? Stream.of(messages[7].split(","))
                                     .mapToInt(Integer::parseInt)
                                     .toArray() : new int[0]
                     ));

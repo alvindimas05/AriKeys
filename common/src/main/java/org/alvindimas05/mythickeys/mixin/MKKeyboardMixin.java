@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Mixin(KeyBinding.class)
 public class MKKeyboardMixin {
@@ -34,7 +35,8 @@ public class MKKeyboardMixin {
 		}
 
 		for (MythicKey mythicKey : MythicKeys.getModifierSortedKeybinds())
-			if (key.equals(mythicKey.getBoundKeyCode()) && mythicKey.testModifiers()) mythickeys$registerPress(mythicKey.getId(), key, pressed);
+			if (!Objects.equals(mythicKey.getType().getPath(), "voice") && key.equals(mythicKey.getBoundKeyCode())
+					&& mythicKey.testModifiers()) mythickeys$registerPress(mythicKey.getId(), key, pressed);
 	}
 
 	@Unique
