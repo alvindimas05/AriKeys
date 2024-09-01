@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "mythickeys",
+  "id": "mythiccontrols",
   "version": "${version}",
-  "name": "mythickeys",
-  "description": "Allows the Minecraft client to send MythicKey keypresses to the server.",
+  "name": "mythiccontrols",
+  "description": "Allows the Minecraft client to send MythicControl keypresses to the server.",
   "authors": [
     "alvindimas05"
   ],
   "contact": {
-    "homepage": "https://github.com/ASangarin/MythicKeys/wiki",
-    "issues": "https://github.com/alvindimas05/MythicKeys/issues",
-    "sources": "https://github.com/alvindimas05/MythicKeys"
+    "homepage": "https://github.com/ASangarin/MythicControls/wiki",
+    "issues": "https://github.com/alvindimas05/MythicControls/issues",
+    "sources": "https://github.com/alvindimas05/MythicControls"
   },
   "license": "MIT",
-  "icon": "assets/mythickeys/icon.png",
+  "icon": "assets/mythiccontrols/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "org.alvindimas05.mythickeys.fabric.MythicKeysFabric"
+      "org.alvindimas05.mythiccontrols.fabric.MythicControlsFabric"
     ]
   },
   "mixins": [
-    "mythickeys.mixins.json",
-    "mythickeys-fabric.mixins.json"
+    "mythiccontrols.mixins.json",
+    "mythiccontrols-fabric.mixins.json"
   ],
   "depends": {
     "fabric": "*",

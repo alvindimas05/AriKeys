@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'mythickeys'
+rootProject.name = 'mythiccontrols'
 
 include 'common'
 include 'fabric'

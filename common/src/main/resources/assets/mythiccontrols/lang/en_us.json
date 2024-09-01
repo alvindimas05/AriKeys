@@ -1,0 +1,11 @@
+{
+  "mythiccontrols.controls.title": "MythicControls Controls",
+  "mythiccontrols.mythicbutton": "MythicControls Controls",
+
+  "mythiccontrols.modifier.left_shift": "LShift",
+  "mythiccontrols.modifier.right_shift": "RShift",
+  "mythiccontrols.modifier.left_alt": "LAlt",
+  "mythiccontrols.modifier.right_alt": "RAlt",
+  "mythiccontrols.modifier.left_ctrl": "LCtrl",
+  "mythiccontrols.modifier.right_ctrl": "RCtrl"
+}
