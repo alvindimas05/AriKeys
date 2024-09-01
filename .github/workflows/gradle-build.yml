@@ -26,6 +26,12 @@ jobs:
           settings-path: ${{ github.workspace }}
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+      - name: Download Voice Lib
+        uses: suisei-cn/actions-download-file@818d6b7dc8fe73f2f924b6241f2b1134ca1377d9
+        id: voicelib-fabric-1.0.1.jar
+        with:
+          url: https://cdn.modrinth.com/data/ns91qQYT/versions/QfpP2L70/voicelib-fabric-1.0.1.jar
+          target: libs
       - name: Build Mods with Gradle
         run: |
           chmod +x ./gradlew
