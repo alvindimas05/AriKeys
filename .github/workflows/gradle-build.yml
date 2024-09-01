@@ -27,7 +27,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Download Voice Lib
-        run: curl https://cdn.modrinth.com/data/ns91qQYT/versions/QfpP2L70/voicelib-fabric-1.0.1.jar -o libs/voicelib-fabric-1.0.1.jar
+        run: |
+          mkdir -p libs
+          curl https://cdn.modrinth.com/data/ns91qQYT/versions/QfpP2L70/voicelib-fabric-1.0.1.jar -o libs/voicelib-fabric-1.0.1.jar
       - name: Build Mods with Gradle
         run: |
           chmod +x ./gradlew
